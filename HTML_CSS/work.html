@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Journey</title>
+    
+     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+   ></script>
+    <style>
+
+@import url("https://fonts.googleapis.com/css?family=Exo+2:400,700&subset=cyrillic");
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+  line-height: 1.5;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 16.66% 50px;
+  width: 100%;
+  font-size: 1.5em;
+  animation: appear;
+  animation-duration: 1s;
+  animation-delay: 1.2s;
+  animation-fill-mode: backwards;
+}
+
+article {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.timeline__nav {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  -webkit-transition: top 0.3s ease-out;
+  transition: top 0.3s ease-out;
+  animation: moveToRight;
+  animation-duration: 1s;
+  animation-delay: 0.7s;
+  animation-fill-mode: backwards;
+}
+.timeline__nav ul {
+  list-style: none;
+  list-style-position: inside;
+  margin: 15px 0;
+}
+.timeline__nav ul li {
+  margin: 15px 0;
+  padding-left: 0;
+  list-style-type: none;
+  color: #bfc1c3;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.timeline__nav ul li.active {
+  font-weight: bold;
+  color: #f94125;
+  border-bottom: 1px dotted transparent;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.timeline__nav ul li:hover {
+  color: #000;
+}
+
+nav.main-nav {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 70px;
+}
+nav.main-nav ul {
+    width: 100%;
+    height: 70px;
+    background: #222;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+nav.main-nav ul a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #ddd;
+
+}   
+.topic {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 30px;
+    animation: moveUp;
+    animation-duration: 1s;
+}
+
+.wrapper img {
+  margin: 20px 0;
+  width: 100%;
+  height: auto;
+  border: 2px solid #222;
+}
+
+.wrapper img.ne {
+  margin: 20px 0;
+  width: 49%;
+  height: auto;
+  border: none;
+  display: inline;
+}
+
+.milestone {
+  margin: 20px 0;
+}
+
+#one {
+  animation: moveToRight;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-fill-mode: backwards;
+}
+#two {
+  animation: moveToRight;
+  animation-duration: 1s;
+  animation-delay: 6s;
+  animation-fill-mode: backwards;
+}
+#three {
+  animation: moveToRight;
+  animation-duration: 1s;
+  animation-delay: 9s;
+  animation-fill-mode: backwards;
+}
+#four {
+  animation: moveToLeft;
+  animation-duration: 1s;
+  animation-delay: 10s;
+  animation-fill-mode: backwards;
+}
+#five {
+  animation: appear;
+  animation-duration: 1s;
+  animation-delay: 12s;
+  animation-fill-mode: backwards;
+}
+
+#six {
+  animation: appear;
+  animation-duration: 1s;
+  animation-delay: 14s;
+  animation-fill-mode: backwards;
+}
+@keyframes moveToLeft {
+    0%{
+        transform: translateX(120px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveToRight {
+    0% {
+        transform: translateX(-140px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(-120px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(120px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+    </style>
+    
+</head>
+<body>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Back</a></li>
+        </ul>
+    </nav>
+    
+<article class="timeline">
+    <nav class="timeline__nav">
+      <ul>
+   
+        <li><span>1998</span></li>
+        <li><span>2013</span></li>
+        <li><span>2014</span></li>       
+        <li><span>2016</span></li>
+
+      </ul>
+    </nav>
+    <div class="topic">
+        <h1>- My Journey -</h1>
+    </div>
+    <section class="timeline__section">
+      <div class="wrapper">
+        <h2 class="milestone">1998 - And so it begins...</h2>
+        <p>This is when my journey begins. I was born in a small town in Hanoi, Vietnam.
+           Although the city's view and people were simple, I felt joyous and lucky everyday since I was born in this beautiful city and surrounded with love from my family.</p>
+        <img src="hanoi.jpg" id="one" alt="">
+
+        <h2 class="milestone">2013 - First Big Achievement</h2>
+        <p>
+          "Mom, Dad, I got into Nguyen Hue!!!! I am crying..." I felt the exact same moment when I found out on school website that I have been able to attend one of the most prestigious high school in the country. That moment was one of the most memorable moments ever, in my opinion. Everybody, including my 6th-grade sibling who is always cheerful whenever I achieve something great academically, was congratulating me. 
+        </p>
+        <img src="img/nguyenhue.jpg" id="two"alt="">
+        <p><strong>Fun fact</strong>: I was actually the first person in my big family to attend a great high school in Vietnam. I felt fortunate, yet again, since this high school strengthened my mentality and academic skills even more, especially Mathematics (I guess it was because I was a Mathematics student in Nguyen Hue).
+        </p>
+        <h2 class="milestone">2014 - A New Milestone</h2>
+        <p>
+          Every single day, I was obssessed of watching YouTube about the life of a student in the U.S., Canada, or the Europe. Nevertheless, despite the addiction to those videos, I never thought that I could go that far, since I was always in my country. </p>
+          <p>
+            Until the second semester in Nguyen Hue, 
+            when my mom asked, "Do you want to go beyond this place to explore and develop yourself as a student?". At first, I was so confused and wondered what she was talking about. She then added, "DO YOU WANT TO STUDY ABROAD?". 
+            I was so surprised, then said, "Yes, of course, mom. But how?" She just sent me multiple high schools and researched with her. Eventually, I chose Nebraska Christian High School, 
+            which was and is always a great boarding school for international students who wants to develop themselves as better in both school and social life. 
+          </p>
+          <img src="img/nebraska.png" class="ne" id="three"alt="">
+          <img src="img/nc.jpg" class="ne" id="four" alt="">
+         <p>
+           I was so grateful of how my family has supported me throughout my academic journey. There is nothing to describe how I felt at the time I landed in the U.S. for the first time. So, so thankful for them.
+         </p>
+         <img src="img/graduation.jpg" id="five" alt="">
+         <p style="text-align: center; font-size: 15px;">Guess who I am :)</p>
+        <h2 class="milestone">2016 - Becoming a Husker</h2>
+        <p>
+          <img src="img/unl.jpg" id="six" alt="University of Nebraska Lincoln">
+          Once again, a new milestone in my early life has happened. I am filled with gratitude of everyone who has helped me achieve this huge landmark. I then decided to be a Mathematics student, since, well, I love Math
+          since I was little and achieved several accomplishments within my region. However, during the study in UNL, I fell in love with creating websites and each function of some great web applications. Despite the devotion 
+          in Mathematics, I really want to challenge myself towards a new subject: Web Development.
+        </p>
+      </div>
+    </section>
+  </article>
+
+            
+        
+            
+        
+           
+         
+            
+          
+        <!-- <div class="swiper-slide" style="background-image: url(K.jpg)" data-year="2018">
+          <div class="swiper-slide-content"><span class="timeline-year">2018</span>
+            <h4 class="timeline-title">CSS 3 EFFECT</h4>
+            <p class="timeline-text">Lorem ipsum dolor site amet, consectetur adipscing elit, sed do eisumod tempor incididut ut labore et dolore magna aliqua. Ut enim ad mimim venjam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+        <div class="swiper-slide" style="background-image: url(n6.jpg)" data-year="2019">
+          <div class="swiper-slide-content"><span class="timeline-year">2019</span>
+            <h4 class="timeline-title">SUPER TITLE</h4>
+            <p class="timeline-text">Lorem ipsum dolor site amet, consectetur adipscing elit, sed do eisumod tempor incididut ut labore et dolore magna aliqua. Ut enim ad mimim venjam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div> -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+<script>
+    $(() => {
+    let stickyTop = 0,
+    scrollTarget = false;
+  
+    let timeline = $('.timeline__nav'),
+    items = $('li', timeline),
+    milestones = $('.timeline__section .milestone'),
+    offsetTop = parseInt(timeline.css('top'));
+  
+    const TIMELINE_VALUES = {
+      start: 190,
+      step: 30 };
+  
+  
+    $(window).resize(function () {
+      timeline.removeClass('fixed');
+  
+      stickyTop = timeline.offset().top - offsetTop;
+  
+      $(window).trigger('scroll');
+    }).trigger('resize');
+  
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > stickyTop) {
+        timeline.addClass('fixed');
+      } else {
+        timeline.removeClass('fixed');
+      }
+    }).trigger('scroll');
+  
+    items.find('span').click(function () {
+      let li = $(this).parent(),
+      index = li.index(),
+      milestone = milestones.eq(index);
+  
+      if (!li.hasClass('active') && milestone.length) {
+        scrollTarget = index;
+  
+        let scrollTargetTop = milestone.offset().top - 80;
+  
+        $('html, body').animate({ scrollTop: scrollTargetTop }, {
+          duration: 400,
+          complete: function complete() {
+            scrollTarget = false;
+          } });
+  
+      }
+    });
+  
+    $(window).scroll(function () {
+      let viewLine = $(window).scrollTop() + $(window).height() / 3,
+      active = -1;
+  
+      if (scrollTarget === false) {
+        milestones.each(function () {
+          if ($(this).offset().top - viewLine > 0) {
+            return false;
+          }
+  
+          active++;
+        });
+      } else {
+        active = scrollTarget;
+      }
+  
+      timeline.css('top', -1 * active * TIMELINE_VALUES.step + TIMELINE_VALUES.start + 'px');
+  
+      items.filter('.active').removeClass('active');
+  
+      items.eq(active != -1 ? active : 0).addClass('active');
+    }).trigger('scroll');
+  });
+</script>
+</body>
+</html>
