@@ -5,6 +5,10 @@
     <title>My Journey</title>
     
      <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
     <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
@@ -169,6 +173,26 @@ nav.main-nav ul a{
   animation-delay: 14s;
   animation-fill-mode: backwards;
 }
+
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.footer p {
+  color: #ddd;
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+
 @keyframes moveToLeft {
     0%{
         transform: translateX(120px);
@@ -248,17 +272,17 @@ nav.main-nav ul a{
         <h1>- My Journey -</h1>
     </div>
     <section class="timeline__section">
-      <div class="wrapper">
+      <div class="wrapper fade-in">
         <h2 class="milestone">1998 - And so it begins...</h2>
         <p>This is when my journey begins. I was born in the middle of Hanoi Capital, Vietnam.
            Although the city's view and people were simple, I felt joyous and lucky everyday since I was born in this beautiful city and surrounded with love from my family.</p>
-        <img src="hanoi.jpg" id="one" alt="">
+        <img src="hanoi.jpg" alt="Hanoi">
 
         <h2 class="milestone">2013 - First Big Achievement</h2>
         <p>
           "Mom, Dad, I got into Nguyen Hue!!!! I am crying..." I felt the exact same moment when I found out on school website that I have been able to attend one of the most prestigious high school in the country. That moment was one of the most memorable moments ever, in my opinion. Everybody, including my 6th-grade sibling who is always cheerful whenever I achieve something great academically, was congratulating me. 
         </p>
-        <img src="img/nguyenhue.jpg" id="two"alt="">
+        <img src="img/nguyenhue.jpg" alt="Nguyen Hue High School">
         <p><strong>Fun fact</strong>: I was actually the first person in my big family to attend a great high school in Vietnam. I felt fortunate, yet again, since this high school strengthened my mentality and academic skills even more, especially Mathematics (I guess it was because I was a Mathematics student in Nguyen Hue).
         </p>
         <h2 class="milestone">2014 - A New Milestone</h2>
@@ -270,16 +294,16 @@ nav.main-nav ul a{
             I was so surprised, then said, "Yes, of course, mom. But how?" She just sent me multiple high schools and researched with her. Eventually, I chose Nebraska Christian High School, 
             which was and is always a great boarding school for international students who wants to develop themselves as better in both school and social life. 
           </p>
-          <img src="img/nebraska.png" class="ne" id="three"alt="">
-          <img src="img/nc.jpg" class="ne" id="four" alt="">
+          <img src="img/nebraska.png" class="ne" alt="Nebraska">
+          <img src="img/nc.jpg" class="ne"  alt="Nebraska Christian High School">
          <p>
            I was so grateful of how my family has supported me throughout my academic journey. There is nothing to describe how I felt at the time I landed in the U.S. for the first time. So, so thankful for them.
          </p>
-         <img src="img/graduation.jpg" id="five" alt="">
+         <img src="img/graduation.jpg"  alt="I Graduated!">
          <p style="text-align: center; font-size: 15px;">Guess who I am :)</p>
         <h2 class="milestone">2016 - Becoming a Husker</h2>
         <p>
-          <img src="img/unl.jpg" id="six" alt="University of Nebraska Lincoln">
+          <img src="img/unl.jpg"   alt="University of Nebraska Lincoln">
           Once again, a new milestone in my early life has happened. I am filled with gratitude of everyone who has helped me achieve this huge landmark. I then decided to be a Mathematics student, since, well, I love Math
           since I was little and achieved several accomplishments within my region. However, during the study in UNL, I fell in love with creating websites and each function of some great web applications. Despite the devotion 
           in Mathematics, I really want to challenge myself towards a new subject: Web Development.
@@ -288,7 +312,14 @@ nav.main-nav ul a{
     </section>
   </article>
 
-            
+  <div class="footer">
+    <div class="copy">
+        <p>&copy; 2020 Designed by Phillip Nguyen</p>
+    </div>
+    
+    
+    
+</div>
         
             
         
@@ -311,6 +342,10 @@ nav.main-nav ul a{
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-1.7.1.min.js"
+  integrity="sha256-iBcUE/x23aI6syuqF7EeT/+JFBxjPs5zeFJEXxumwb0="
+  crossorigin="anonymous"></script>
 <script>
     $(() => {
     let stickyTop = 0,
@@ -384,6 +419,31 @@ nav.main-nav ul a{
       items.eq(active != -1 ? active : 0).addClass('active');
     }).trigger('scroll');
   });
+
+
+  $(document).ready(function() {
+    
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('.fade-in').each( function(i){
+            
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            console.log(bottom_of_object + " " + bottom_of_window);
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},1500);
+                    
+            }
+            
+        }); 
+    
+    });
+    
+});
 </script>
 </body>
 </html>

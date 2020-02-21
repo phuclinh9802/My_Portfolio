@@ -3,15 +3,17 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
-
 }
 
+html, body {
+  width: 100%;
+}
 
 
 .relative {
   position: relative;
   width: 100%;
-  height: 270vh;
+  height: 260vh;
 }
 
 .navbar {
@@ -68,7 +70,9 @@
   background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("img/bg-work.jpg") center no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  overflow: hidden;
   min-height: 100vh;
+  width: 100%;
 
 }
 
@@ -106,6 +110,7 @@
   top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
   text-align: center;
   animation: appear 1s;
   animation-delay: 6s;
@@ -161,12 +166,66 @@
 .lang img:hover {
   filter: grayscale(0%);
 }
+
+@media only screen 
+    and (device-width : 414px) 
+    and (device-height : 896px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+      .parallax {
+        overflow: hidden;
+      }
+      .absolute {
+        padding: 20px;
+      }
+      
+      .absolute .lang {
+        padding-bottom: 150px;
+      }
+
+    }
 @media screen and (max-width: 600px) {
+  .absolute {
+    padding: 20px;
+  }
+  
+  .absolute .lang {
+    padding-bottom: 150px;
+  }
+  .absolute h2, .work h2, .absolute-2 h2 {
+    font-size: 40px;
+  
+  }
+  .relative {
+    height: 280vh;
+  }
+  .work {
+    height: 60vh;
+  }
   .company #savis {
     width: 30%;
   }
+  .image-3 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .footer {
+    position: absolute;
+    top: 2200px;
+  }
+  .continue p {
+    display: none;
+  }
 }
 @media screen and (max-width: 768px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+  .work {
+    background-attachment: scroll;
+  }
+  .contain p {
+    font-size: 35px;
+  }
   .lang {
     grid-template-columns: 130px 130px 130px;
     grid-template-rows: 75px ;
@@ -174,17 +233,11 @@
     justify-content: space-evenly;
   }
 
-  .projects img{
-    display: flex;
-    flex-direction: column;
-    
-    /* grid-template-columns: 130px;
-    grid-template-rows: 100px;
-    height: 300px;
-    justify-content: space-around; */
-  }
-  .projects img {
-    width: 100%;
+  .work .company #savis{
+    width: 50%;
+  }  
+  .work .company #fpt{
+    width: 60%;
   }
 
   .social a {
@@ -217,7 +270,11 @@
   }
 }
 
-
+@media screen and (max-width: 1658px) {
+  .projects .link {
+    display: none;
+  }
+}
 .lang img {
   width: 30%;
   height: auto;
@@ -253,7 +310,7 @@
 .work .company {
   position: absolute;
   width: 100%;
-  height: 50vh;
+  height: 30vh;
   top: 20vh;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -290,6 +347,9 @@
 
 }
 
+@media screen and (min-width: 600px) {
+    
+}
 .projects {
   position: absolute;
   width: 100%;
@@ -350,10 +410,9 @@
 }
 
 .footer {
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 200px;
-  top: 255vh;
+  height: 100px;
   background-color: #222;
   display: flex;
   justify-content: center;
