@@ -43,12 +43,12 @@
     
 
     <div class="relative">
-        <section class="absolute fade-in">
-                <div class="desc">
+        <section class="absolute">
+                <div class="desc slide-up">
                     <h2>Technologies</h2>
                     <p>Some of the technologies I have learned and worked with in the past 5 years</p>
                 </div>
-                <div class="lang">
+                <div class="lang slide-up">
                     <img src="https://img.icons8.com/color/240/000000/angularjs.png" class="grid">
                     <img src="https://img.icons8.com/color/240/000000/html-5.png" class="grid"> 
                           
@@ -64,12 +64,12 @@
             
         </section>
 
-        <section class="work fade-in">
-            <div class="work-text">
+        <section class="work">
+            <div class="work-text slide-up">
                 <h2>Experience</h2>
                 <p>Companies that I have worked with</p>
             </div>
-            <div class="company">
+            <div class="company slide-up">
                 <img src="img/Savis.png" id="savis"alt="" >  
                 <img src="img/fptis.jpg" id="fpt"alt="">                       
             </div>
@@ -77,14 +77,14 @@
         </section>
 
 
-        <section class="absolute-2 fade-in">
-           <div class="desc">
+        <section class="absolute-2 ">
+           <div class="desc slide-up">
                <h2>Projects</h2>
                <p>These are some of the projects I have built or contributed</p>
            </div>
            
            <div class="projects">
-            <div class="image-3">
+            <div class="image-3 slide-up-more">
                 <a href="https://github.com/phuclinh9802/SchoolSystem">
                     <img src="img/goinvoice.png" id="go" alt="">
                    </a>
@@ -96,7 +96,7 @@
                        
                    </div>
                </div>
-               <div class="image-3">
+               <div class="image-3 slide-up-more">
                 <a href="https://github.com/phuclinh9802/SchoolSystem">
                     <img src="img/FinancialSystem.PNG" id="finance" alt="">
                    </a>
@@ -106,7 +106,7 @@
                        </div>
                    </div>
                </div>
-               <div class="image-3">
+               <div class="image-3 slide-up-more">
                 <a href="">
                     <img src="img/schoolsystem.png" id="school" alt="">
                    </a>
@@ -118,7 +118,7 @@
                        
                    </div>
                </div>
-               <div class="image-3">
+               <div class="image-3 slide-up-more">
                 <a href="">
                     <img src="img/jwtproject.png" id="jwt" alt="">
                    </a>
@@ -130,7 +130,7 @@
                        
                    </div>
                </div>
-               <div class="image-3">
+               <div class="image-3 slide-up-more">
                 <a href="">
                     <img src="img/workflow.png" id="school" alt="">
                    </a>
@@ -174,36 +174,61 @@
   src="https://code.jquery.com/jquery-1.7.1.min.js"
   integrity="sha256-iBcUE/x23aI6syuqF7EeT/+JFBxjPs5zeFJEXxumwb0="
   crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
     <script>
+        var slideUp = {
+        distance: '100%',
+        origin: 'bottom',
+        delay: 1200,
+        reset: false
+        };
+
+        var slideUpMore = {
+        distance: '100%',
+        interval: 200,
+        origin: 'left',
+        delay: 1000,
+        reset: false
+        };
+        ScrollReveal().reveal('.slide-up', slideUp);
+        ScrollReveal().reveal('.slide-up-more', slideUpMore);
+        ScrollReveal().reveal('.bello', { delay: 500,reset: true });
+
+    </script>
+    <script>
+        
         window.addEventListener("load", function() {
             const loader = document.querySelector(".loader");
             console.log(loader);
             loader.className += " hidden";
         });
 
-        $(document).ready(function() {
+//         $(document).ready(function() {
     
-    /* Every time the window is scrolled ... */
-    $(window).scroll( function(){
+//     /* Every time the window is scrolled ... */
+//     $(window).scroll( function(){
     
-        /* Check the location of each desired element */
-        $('.fade-in').each( function(i){
+//         /* Check the location of each desired element */
+//         $('.fade-in').each( function(i){
             
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            console.log(bottom_of_object + " " + bottom_of_window);
-            /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object ){
+//             var bottom_of_object = $(this).position().top + $(this).outerHeight();
+//             var bottom_of_window = $(window).scrollTop() + $(window).height();
+//             console.log(bottom_of_object + " " + bottom_of_window);
+//             /* If the object is completely visible in the window, fade it it */
+//             if( bottom_of_window > bottom_of_object ){
                 
-                $(this).animate({'opacity':'1'},1500);
+//                 $(this).animate({'opacity':'1'},1500);
                     
-            }
+//             }
             
-        }); 
+//         }); 
     
-    });
+//     });
     
-});
+// });
+
+
+
     </script>
 </body>
 </html>
