@@ -48,18 +48,18 @@
                     <h2>Technologies</h2>
                     <p>Some of the technologies I have learned and worked with in the past 5 years</p>
                 </div>
-                <div class="lang slide-up">
-                    <img src="https://img.icons8.com/color/240/000000/angularjs.png" class="grid">
-                    <img src="https://img.icons8.com/color/240/000000/html-5.png" class="grid"> 
+                <div class="lang">
+                    <img src="https://img.icons8.com/color/240/000000/angularjs.png" class="grid slide-down">
+                    <img src="https://img.icons8.com/color/240/000000/html-5.png" class="grid slide-down"> 
                           
-                    <img src="https://img.icons8.com/color/240/000000/css3.png" class="grid"> 
-                    <img src="https://img.icons8.com/color/240/000000/javascript.png" class="grid">        
-                    <img src="https://img.icons8.com/ios/250/000000/mysql-logo.png" class="grid">        
-                    <img src="https://img.icons8.com/color/240/000000/java-coffee-cup-logo.png" class="grid">          
+                    <img src="https://img.icons8.com/color/240/000000/css3.png" class="grid slide-down" > 
+                    <img src="https://img.icons8.com/color/240/000000/javascript.png" class="grid slide-down">        
+                    <img src="https://img.icons8.com/ios/250/000000/mysql-logo.png" class="grid slide-down">        
+                    <img src="https://img.icons8.com/color/240/000000/java-coffee-cup-logo.png" class="grid slide-down">          
                     
-                    <img src="https://img.icons8.com/color/240/000000/c-plus-plus-logo.png" class="grid">                
-                    <img src="https://img.icons8.com/color/240/000000/c-sharp-logo.png" class="grid">                
-                    <img src="img/JQuery_1.png" class="grid">
+                    <img src="https://img.icons8.com/color/240/000000/c-plus-plus-logo.png" class="grid slide-down">                
+                    <img src="https://img.icons8.com/color/240/000000/c-sharp-logo.png" class="grid slide-down">                
+                    <img src="img/JQuery_1.png" class="grid slide-down">
                 </div>
             
         </section>
@@ -84,8 +84,8 @@
            </div>
            
            <div class="projects">
-            <div class="image-3 slide-up-more">
-                <a href="https://github.com/phuclinh9802/SchoolSystem">
+            <div class="image-3">
+                <a class="slide-up-more" href="https://github.com/phuclinh9802/SchoolSystem">
                     <img src="img/goinvoice.png" id="go" alt="">
                    </a>
                    <div class="middle">
@@ -96,8 +96,8 @@
                        
                    </div>
                </div>
-               <div class="image-3 slide-up-more">
-                <a href="https://github.com/phuclinh9802/SchoolSystem">
+               <div class="image-3">
+                <a class="slide-up-more" href="https://github.com/phuclinh9802/SchoolSystem">
                     <img src="img/FinancialSystem.PNG" id="finance" alt="">
                    </a>
                    <div class="middle">
@@ -106,8 +106,8 @@
                        </div>
                    </div>
                </div>
-               <div class="image-3 slide-up-more">
-                <a href="">
+               <div class="image-3">
+                <a href="" class="slide-up-more">
                     <img src="img/schoolsystem.png" id="school" alt="">
                    </a>
                    <div class="middle">
@@ -118,8 +118,8 @@
                        
                    </div>
                </div>
-               <div class="image-3 slide-up-more">
-                <a href="">
+               <div class="image-3">
+                <a href="" class="slide-up-more">
                     <img src="img/jwtproject.png" id="jwt" alt="">
                    </a>
                    <div class="middle">
@@ -130,8 +130,8 @@
                        
                    </div>
                </div>
-               <div class="image-3 slide-up-more">
-                <a href="">
+               <div class="image-3">
+                <a href="" class="slide-up-more">
                     <img src="img/workflow.png" id="school" alt="">
                    </a>
                    <div class="middle">
@@ -182,9 +182,15 @@
         delay: 1200,
         reset: false
         };
-
-        var slideUpMore = {
+        var slideDown = {
         distance: '100%',
+        origin: 'top',
+        delay: 1000,
+        interval: 200,
+        reset: false
+        };
+        var slideUpMore = {
+        distance: '50%',
         interval: 200,
         origin: 'left',
         delay: 1000,
@@ -192,7 +198,7 @@
         };
         ScrollReveal().reveal('.slide-up', slideUp);
         ScrollReveal().reveal('.slide-up-more', slideUpMore);
-        ScrollReveal().reveal('.bello', { delay: 500,reset: true });
+        ScrollReveal().reveal('.slide-down', slideDown);
 
     </script>
     <script>
